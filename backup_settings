@@ -1,0 +1,12 @@
+#!/bin/bash -x
+source common
+
+mkdir -p $SOURCE
+
+echo "saving package list to ${PACK_LIST}"
+dpkg --get-selections > $PACK_LIST
+echo "saving sources.list* to ${SOURCE}"
+sudo cp -Rp /etc/apt/sources.list* $SOURCE
+echo "saving apt keys to ${REPO_KEYS}"
+sudo apt-key exportall > ${REPO_KEYS}
+

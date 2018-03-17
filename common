@@ -1,0 +1,6 @@
+#!/bin/bash
+
+DATA=data
+PACK_LIST="${DATA}/Package.list"
+SOURCE="${DATA}/sources"
+REPO_KEYS="${DATA}/Repo.keys"

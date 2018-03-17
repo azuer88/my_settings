@@ -1,0 +1,26 @@
+#!/bin/bash -x
+
+source common
+
+# echo "Add Repo.keys from ${REPO_KEYS}..."
+# sudo apt-key add $REPO_KEYS
+
+# echo "Restoring sources.list* from ${SOURCES}..."
+# sudo cp -rp $SOURCES/*  /etc/apt/
+
+echo "Updating apt cache..."
+sudo apt-get update 
+
+echo "installing dselect..."
+sudo apt-get install dselect
+echo "updating dselect..."
+sudo dselect update
+
+echo "update dpkg's list of avail packages..."
+apt-cache dumpavail > ~/tmp/temp_avail
+sudo dpkg --merge-avail ~/tmp/temp_avail
+rm ~/tmp/temp_avail
+
+echo "Installing packages from ${PACK_LIST}..."
+sudo dpkg --set-selections < $PACK_LIST
+sudo apt-get dselect-upgrade -y

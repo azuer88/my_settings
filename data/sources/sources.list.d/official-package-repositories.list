@@ -1,0 +1,8 @@
+deb http://mirror.0x.sg/linuxmint sylvia main upstream import backport 
+
+deb http://mirror.pregi.net/ubuntu xenial main restricted universe multiverse
+deb http://mirror.pregi.net/ubuntu xenial-updates main restricted universe multiverse
+deb http://mirror.pregi.net/ubuntu xenial-backports main restricted universe multiverse
+
+deb http://security.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse
+deb http://archive.canonical.com/ubuntu/ xenial partner
