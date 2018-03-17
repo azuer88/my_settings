@@ -3485,6 +3485,7 @@ mps-youtube					install
 mpv						install
 mscompress					install
 msodbcsql					install
+msodbcsql17					install
 mssql-tools					deinstall
 mtools						install
 mtr-tiny					install
